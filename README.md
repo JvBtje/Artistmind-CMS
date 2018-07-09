@@ -1,7 +1,9 @@
 # Artistmind-CMS
-This is a old version of the artistmind cms system
+This is a old version of the artistmind cms system. It is out of use... nobody is using it so I made it public.
 - You can have mulitpul themes
 - You can have mulitpul plugins
 - You can send message to other users
 - You have a upload system...
 - Database is coming soon....
+
+Give Jeroen van Beuningen a cup of coffie if you see him somewhere on the streets... I think he needs it...
