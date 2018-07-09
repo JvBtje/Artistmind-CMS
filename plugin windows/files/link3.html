@@ -1,0 +1,32 @@
+<script type="text/javascript" > 
+function uploadchangeb2(){
+
+
+	
+		
+	
+		document.getElementById("fileToUploadform").action = "./system/upload3.php?filename="+window.parent.currentuploaddir;
+		
+		document.getElementById("fileToUploadform").submit();
+		document.getElementById("uploadmessage").innerHTML = "the file is uploading";
+	
+	
+}
+</script>
+your browser does not support the great html5 uploader. Pleas upergrade your browser asdf.
+
+	
+	
+
+
+<form action="./system/upload3.php" id="fileToUploadform" name="fileToUploadform" method="post"
+enctype="multipart/form-data">
+<label for="file">Filename:</label>
+<input type="file" name="file" id="file"><br>
+<input type="button" name="mysubmit" value="Upload..." onclick="uploadchangeb2();return false;" />
+</form>
+
+	
+	<div id="uploadmessage"></div>
+	
+	<body>

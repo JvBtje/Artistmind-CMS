@@ -1,0 +1,114 @@
+html, body {
+	color:#000;
+	height:100%; 
+	font-family: arial;
+	font-size: 12px;	
+	overflow: auto;
+	margin:0; 
+	background-color:#fff;
+}
+
+img{
+	border:0px;
+}
+
+#uploadbarback {
+	background-color:#fff;
+	background-repeat:repeat;
+	background-image:url(../../system/systemicon/loadbarback.gif);
+} 
+
+#uploadbar {
+	background-color:#0f0;
+	background-repeat:repeat;
+	background-image:url(../../system/systemicon/loadbar.gif);
+} 
+
+#dirlijst{
+	position:absolute;	
+	top:20px;
+	left:300px;
+	text-align: left;
+	float:right;
+	
+}
+
+#containerback{
+	display:block;
+	position: fixed;
+	left:0px;	
+	top:20px;
+	height:100%;
+	width:295px;
+	background-color:#DDDDDD;
+	
+}
+
+#container{		
+	position:absolute;
+	top:20px;
+	padding:10px;
+	width:275px;
+	background-color:#DDDDDD;
+}
+
+#directory{
+	display:none;
+	opacity:0.4;
+	filter:alpha(opacity=40); /* For IE8 and earlier */
+	position: fixed;
+ 	background-color:#000;
+	left:0px;	
+	top:0px;
+	height:100%;
+	width:100%;
+}
+
+#directorywindow{
+	display:none;
+	position: fixed;
+ 	background-color:#fff;
+	left:50%;
+	margin-left:-150px;
+	margin-top:-75px;	
+	top:50%;
+	padding:50px;
+	text-align:left;
+	height:60px;
+	width:250px;
+}
+
+#Renamewindow{
+	display:none;
+	position: fixed;
+ 	background-color:#fff;
+	left:50%;
+	margin-left:-150px;
+	margin-top:-75px;	
+	top:50%;
+	padding:50px;
+	text-align:left;
+	height:60px;
+	width:250px;
+}
+
+#imageresizewindow{
+	display:none;
+	position: fixed;
+ 	background-color:#fff;
+	left:50%;
+	margin-left:-250px;
+	margin-top:-75px;	
+	top:50%;
+	padding:50px;
+	text-align:left;
+	height:60px;
+	width:500px;
+}
+
+#fileselector, #itemselector2 {
+	display:block;
+	top:80;
+	position:absolute;
+	z-index:99;
+}
