@@ -1,0 +1,1 @@
+<?php$stptype = "Language";$stpurl = "indexstandalone.php?plugin=MessageText";$stpname = "Text Message";$stpusermenu = '';?>

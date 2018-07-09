@@ -1,0 +1,1 @@
+<?php$stptype = "Options";$stpurl = "indexstandalone.php?plugin=files";$stpname = "File Manager";$stpusermenu = "";?>

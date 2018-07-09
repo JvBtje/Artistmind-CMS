@@ -1,0 +1,1 @@
+<?php$stptype = "Options";$stpurl = "indexstandalone.php?plugin=Whatsnew";$stpname = "What's new";$stpusermenu = '<div id="Search"><a href="#" onclick="parent.dofilemanager(\'indexstandalone.php?plugin=Whatsnew\');return false">What\'s new</a></div>';?>

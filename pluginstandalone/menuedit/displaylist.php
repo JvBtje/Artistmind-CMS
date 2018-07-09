@@ -1,0 +1,1 @@
+<?php$menuurl ='./pluginstandalone/menuedit/menuajax.php';$menuname = 'Menu options';include ('submenulayout.php');?>

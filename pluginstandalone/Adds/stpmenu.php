@@ -1,0 +1,1 @@
+<?php$stptype = "Options";$stpurl = "indexstandalone.php?plugin=Adds";$stpname = "Advertisement";?>

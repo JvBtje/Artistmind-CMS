@@ -1,0 +1,1 @@
+<?php$stptype = "Options";$stpurl = "indexstandalone.php?plugin=Users";$stpname = "Users";$stpusermenu = '<div id="Search"><a href="#" onclick="parent.dofilemanager(\'indexstandalone.php?plugin=Users\');return false">Users</a></div>';?>

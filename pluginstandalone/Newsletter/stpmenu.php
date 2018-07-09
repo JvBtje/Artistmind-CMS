@@ -1,0 +1,1 @@
+<?php$stptype = "Language";$stpurl = "indexstandalone.php?plugin=Newsletter";$stpname = "Newsletter";$stpusermenu = "";?>

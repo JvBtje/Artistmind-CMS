@@ -1,0 +1,1 @@
+<?php$stptype = "Options";$stpurl = "indexstandalone.php?plugin=usergroepen";$stpname = "Edit Usergroups";$stpusermenu = "";?>

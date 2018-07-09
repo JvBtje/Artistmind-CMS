@@ -1,0 +1,1 @@
+<?php$stptype = "Options";$stpurl = "indexstandalone.php?plugin=menumemberedit";$stpname = "Edit Menu Member";$stpusermenu = "";?>

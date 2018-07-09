@@ -1,0 +1,1 @@
+<?php$menuurl ='./pluginstandalone/menumemberedit/menumemberajax.php';$menuname = 'Menu Member options';include ('submenulayout.php');?>
