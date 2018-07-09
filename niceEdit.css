@@ -1,0 +1,13 @@
+#container {margin-top:60px; width:760px; height:1200px; border:10px solid #707070; background:transparent;}
+#toolbar {position:fixed; top:0px; left:125px; border:0px solid #000000;}
+#main {height:600px; padding:10px; border:1px solid lime;}
+textarea {width:600px; height:900px;}
+
+div.fixme {position:fixed; top:10px; left:73%; z-index:2;}
+@media screen {
+* html, * html body {overflow-y:hidden!important; height:100%; margin:0; padding:0;}
+* html #iefix {height:100%; overflow-y:scroll; position:relative;}
+* html div#fixme, * html div#fixme-bottom, * html div#fixme-middle {position: relative;}
+}
+
+#nicedit {z-index:160;}
