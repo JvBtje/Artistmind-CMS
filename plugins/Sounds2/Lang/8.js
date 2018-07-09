@@ -1,0 +1,16 @@
+mp3lang = array ();
+mp3lang.title = "Title";
+mp3lang.Album = "Album";
+mp3lang.Author = "Author";
+mp3lang.AlbumAuthor = "AlbumAuthor";
+mp3lang.Track = "Track";
+mp3lang.Year = "Year";
+mp3lang.theLenght = "theLenght";
+mp3lang.theDesc = "Disc";
+mp3lang.Genre = "Genre";
+mp3lang.Copyright = "Copyright";
+mp3lang.Publisher = "Publisher";
+mp3lang.URL = "URL";
+mp3lang.Comments = "Comments";
+mp3lang.Composer = "Composer";
+mp3lang.Genre = "Genre";
