@@ -1,6 +1,6 @@
 <?php
 $DbServer = "localhost";
-$Db = "artistmind";
+$Db = "defaultdb";
 $DbUsername = "root";
 $DbPassword = "";
 $cachetumb = true;
