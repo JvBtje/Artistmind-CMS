@@ -1,0 +1,2 @@
+
+  imgwaiter = 0;

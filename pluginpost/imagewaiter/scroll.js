@@ -1,0 +1,3 @@
+
+
+imgwaiter = doimagewaitscroll (imgwaiter);
