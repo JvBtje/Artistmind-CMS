@@ -25,7 +25,7 @@ echo '
 <head>
 <script language="javascript">
 function window_onload(){
-
+	
 }
 
 function window_onunload(){

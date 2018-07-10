@@ -8,9 +8,9 @@ $output .= '
 $output .= '
 
 <script language="javascript">
-function window_onload2(){
+function window_onload(){
 	loaddocuments(0);
-	loadmessagewhatsnew(0);
+	//loadmessagewhatsnew(0);
 }
 themeurl = "'.$_SESSION['Theme'].'";
 imgdetail = 0;

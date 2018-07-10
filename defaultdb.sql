@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Gegenereerd op: 09 jul 2018 om 22:24
+-- Gegenereerd op: 10 jul 2018 om 13:45
 -- Serverversie: 10.1.30-MariaDB
 -- PHP-versie: 7.2.2
 
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `defaultdb`
+-- Database: `defaultdb2`
 --
 
 -- --------------------------------------------------------
@@ -447,6 +447,13 @@ CREATE TABLE `messagetext` (
   `wrongsecretcode` text COLLATE utf8_unicode_ci
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
+--
+-- Gegevens worden geëxporteerd voor tabel `messagetext`
+--
+
+INSERT INTO `messagetext` (`Id`, `Language`, `Replystext`, `Reply`, `Noreplyfound`, `introreply`, `Usernametext`, `emailtext`, `secretcodetext`, `insertsecretcodetext`, `informmetext`, `messagetext`, `messagebuttontext`, `Nomailtext`, `somebodyrespondtext`, `messageplaced`, `nomessagefound`, `emailisempty`, `messageisempty`, `usernameisempty`, `wrongsecretcode`) VALUES
+(1, 7, 'Berichten', 'Bericht schrijven', 'Er is nog geen reactie, schrijf nu zelf een reactie.', '<a href=\"http://www.artistmind.nl/richtext-72-189-Plaatsen%20berichten.html\">Ik ga akkoord met de regels.</a>&nbsp;De volgende tekens zijn verboden: \" \' &lt; &gt;&nbsp;<br>', 'Gebruikersnaam (deze wordt weergegeven bij reactie)', 'Email (deze word niet weergegeven bij reactie)', 'Secret code', 'Secret code invoer', 'Hou me op de hoogte', 'Bericht', 'Plaats Bericht', '<span style=\"color: rgb(34, 34, 34); font-family: arial, sans-serif; font-size: 13px; text-align: -webkit-auto; \">Wilt u geen mail meer ontvangen klik dan op de onderstaande link:</span>&nbsp;<br>', '<span style=\"color: rgb(34, 34, 34); font-family: arial, sans-serif; font-size: 13px; text-align: -webkit-auto; \">Iemand heeft gereageert op je bericht op&nbsp;</span><a href=\"http://www.artistmind.nl/\" target=\"_blank\" style=\"color: rgb(17, 85, 204); font-family: arial, sans-serif; font-size: 13px; text-align: -webkit-auto; \">www.artistmind.nl</a><span style=\"color: rgb(34, 34, 34); font-family: arial, sans-serif; font-size: 13px; text-align: -webkit-auto; \">. Klik op de link om te kijken wat de reactie is:</span>&nbsp;<br>', 'Een kopie wordt naar uw email adres gestuurt, uw bericht is ontvangen met de volgende gegevens:', 'Error: Het bericht is niet gevonden', 'Error: Je moet je email adres nog invullen', 'Error: Je moet nog een bericht schrijven', 'Error: Je moet je gebruiksernaam nog invullen', 'Error: De secret code is fout');
+
 -- --------------------------------------------------------
 
 --
@@ -525,7 +532,7 @@ CREATE TABLE `reply` (
   `MainId` int(11) NOT NULL,
   `Stat` enum('normal','deleted','history') COLLATE utf8_unicode_ci DEFAULT NULL,
   `Filelist` text COLLATE utf8_unicode_ci,
-  `name` text COLLATE utf8_unicode_ci NOT NULL
+  `name` text COLLATE utf8_unicode_ci
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
@@ -632,7 +639,7 @@ CREATE TABLE `system` (
 --
 
 INSERT INTO `system` (`Id`, `BackupEmail`, `LastBackup`, `submitemail`, `submitreplyemail`, `submitsenderemail`, `DefaultLanguage`, `Nieuwsbrief`, `Backup`, `Nieuwsbriefwachttijd`, `Theme`, `RedirectLogin`, `RedirectIndex`, `Redirect404`, `Redirect400`, `Redirect401`, `Redirect403`, `Redirect500`, `Listview`, `Listview2`) VALUES
-(1, '', '2018-04-01 01:10:05', '', '', '', 0, 1, 1, '', './Themes/default/', 'indexstandalone.php?plugin=Whatsnew', 'indexstandalone.php?plugin=Whatsnew', '', '', '', '', '', '<div id=\"listitiem\"><h4><a href=\"%listurl%\"> %listheading%</a></h4><a href=\"%listurl%\"><img src=\"./system/imgtumb.php?url=%listimage%&amp;maxsize=270&amp;aspectratio=0.56\"></a><br>%listtext% <h4><a href=\"%listurl%\"> meer...</a></h4></div>', '<div id=\"listitiem\"><div style=\"display:block;\"><h4><a href=\"%listurl%\"> %listheading%</a></h4>%listtext%<h4><a href=\"%listurl%\"> meer...</a></h4></div></div>');
+(1, '', '2018-03-18 01:10:04', '', '', '', 7, 1, 1, '', './Themes/Default/', 'indexstandalone.php?plugin=Whatsnew', 'indexstandalone.php?plugin=Whatsnew', '', '', '', '', '', '<div id=\"listitiem\"><h4><a href=\"%listurl%\"> %listheading%</a></h4><a href=\"%listurl%\"><img src=\"./system/imgtumb.php?url=%listimage%&amp;maxsize=270&amp;aspectratio=0.56\"></a><br>%listtext% <h4><a href=\"%listurl%\"> meer...</a></h4></div>', '<div id=\"listitiem\"><div style=\"display:block;\"><h4><a href=\"%listurl%\"> %listheading%</a></h4>%listtext%<h4><a href=\"%listurl%\"> meer...</a></h4></div></div>');
 
 -- --------------------------------------------------------
 
@@ -988,7 +995,7 @@ ALTER TABLE `menumember`
 -- AUTO_INCREMENT voor een tabel `messagetext`
 --
 ALTER TABLE `messagetext`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT voor een tabel `nieuwsbrief`

@@ -331,10 +331,10 @@ function addformelement(Name,theValue,Type,checked,text,rules,errormsg,formediti
 
 	
 
-
+$txt =  '<form action="indexnew.php?plugin=form&type=save&sectie='.$sectie.'&Id='.$MainId.'" method="POST" name="form1" autocomplete="on"><div id="formelements"></div></form>';
 $found = false;
 if ($type == "select"){
-$txt =  '<form action="indexnew.php?plugin=form&type=save&sectie='.$sectie.'&Id='.$MainId.'" method="POST" name="form1" autocomplete="on"><div id="formelements"></div></form>';
+
 	$result = mysqli_query($link,"SELECT Naam, Parent, Id, MainId, targetmainid, PublishDate, LastSaved, theDate FROM groepen WHERE MainId=".$MainId." AND Language=". $_SESSION['Language']);
 	if (!$result) {
     	die('Query failed: ' . mysqli_error($link));
@@ -509,15 +509,14 @@ $result2 = mysqli_query($link,"SELECT Id, Name, theValue, Type, checked, TheOrde
 			}
 				
 				$txt = $txt.'addformelement(\''.str_replace("'", "\'", $row2["Name"]).'\',\''.str_replace("'", "\'", $value).'\',\''.str_replace("'", "\'", $row2["Type"]).'\',\''.str_replace("'", "\'", $checked).'\',\''.str_replace("'", "\'", $row2["text"]).'\',\''.str_replace("'", "\'", $row2["formrules"]).'\',\''.str_replace("'", "\'", $row2["errormsg"]).'\',-1);';
-				//$txt = $txt.'addformelement(\''.str_replace("'", "\'", $row2["Name"]).'\',\''.str_replace("'", "\'", $value).'\',\''.str_replace("'", "\'", $row2["Type"]).'\',\''.str_replace("'", "\'", $checked).'\',\''.str_replace("'", "\'", $text).'\',\''.str_replace("'", "\'", $row2["formrules"]).'\',\''.str_replace("'", "\'", $row2["errormsg"]).'\',-1);';
 				
 			}
 		}
-		$txt = $txt.'updateform();</script>';
+		$txt = $txt.'updateform ();</script>';
 		
 		$txt = $txt. '<table>';
 		$txt = $txt. '<tr><td><div id="errormsg">'.$wrongsecretcode.'</div></td></tr>';
-		$txt = $txt.'<tr><td>Secret code</td><td><img src="/system/imageauth.php"> </td></tr>
+		$txt = $txt.'<tr><td>Secret code</td><td><img src="system/imageauth.php"> </td></tr>
 		<tr><td>Secret code invoer</td><td><input type="password" name="ImgPas" size="24" border="0"></td></tr>';
 		$txt = $txt. '</table>';
 		$txt = $txt. '<div id="buttonlayout">

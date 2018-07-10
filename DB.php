@@ -1,6 +1,6 @@
 <?php
 $DbServer = "localhost";
-$Db = "defaultdb";
+$Db = "defaultdb2";
 $DbUsername = "root";
 $DbPassword = "";
 $cachetumb = true;

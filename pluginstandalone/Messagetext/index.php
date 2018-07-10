@@ -30,7 +30,7 @@ function removeArea2() {
 }
 
 
-function window_onload2(){
+function window_onload(){
 			 myNicEditor1 = new nicEditor({fullPanel : true, iconsPath : \'./iconen/nicEditorIcons.gif\'}).panelInstance(\'introreply\');
 			 myNicEditor2 = new nicEditor({fullPanel : true, iconsPath : \'./iconen/nicEditorIcons.gif\'}).panelInstance(\'Nomailtext\');
 			 myNicEditor3 = new nicEditor({fullPanel : true, iconsPath : \'./iconen/nicEditorIcons.gif\'}).panelInstance(\'somebodyrespondtext\');
@@ -425,7 +425,7 @@ $result = mysqli_query($link,"SELECT Id FROM messagetext WHERE Language =".$_SES
 	}
 	$output .= '</td>
 			</tr>
-		</table><script>//window_onload2();</script>';
+		</table><script>//window_onload();</script>';
 }
 }else{
 // user is niet ingelogt

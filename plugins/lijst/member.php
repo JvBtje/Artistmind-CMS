@@ -85,7 +85,7 @@ $result = mysqli_query($link,"SELECT Id, MainId,  DATE_FORMAT(TheDate, '%d-%c-%Y
 	$searchstring = "";
 	$outputsectie = findId($GroupToShow, array());
 	$outputsectie = $outputsectie[0];
-	
+	if( !function_exists('Zoeklijstids') ){
 function Zoeklijstids($Start,$SubGroupContent){
 	global $link;
 	$output = array();
@@ -109,6 +109,7 @@ function Zoeklijstids($Start,$SubGroupContent){
 		
 		}
 	return $output;	
+	}
 	}
 $MainIds = Zoeklijstids($GroupToShow, $SubGroupContent);
 //echo "nummainids".print_r($MainIds)."MaxLijst".count($MainIds);

@@ -1,7 +1,6 @@
-
-
 <title>Your website - <?php echo $Naam; ?></title>
-<meta name="keywords" content="this is cool">
+<meta name="keywords" content="Dit is coole content">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, minimum-scale=1.0">
 
 <style>
 <?php
@@ -23,15 +22,33 @@ include ("../../nicedit.css");
 include ("./menu.js");
 ?>
 </script>
+
 <script type="text/javascript">
 function window_onload2(){
-		window_onload();
-		load();
+	
+		
+		
+		if (typeof load == 'function') { load();}
+		
+
+	
 		
 }
 function load()
 {
+	if (document.getElementById('menuajax')){
+		slidemenu(document.getElementById('menuslidertop'),document.getElementById('menusliderbottom'),document.getElementById('footer'),document.getElementById('menuslider'),document.getElementById('menuslider'));
+	}
+	if (document.getElementById('menuajax2')){
+		slidemenu(document.getElementById('menuslidertop2'),document.getElementById('menusliderbottom2'),document.getElementById('footer'),document.getElementById('menuslider2b'),document.getElementById('menuslider2b'));
+	}
+	if (document.getElementById('menuajax3')){
+		slidemenu(document.getElementById('menuslidertop3'),document.getElementById('menusliderbottom3'),document.getElementById('footer'),document.getElementById('menuslider3'),document.getElementById('menuslider3'));
+	}
 
+if (window.width1000 != true && window.width1000 != false){
+	window.width1000 ;
+}
 
 var viewportwidth;
  var viewportheight;
@@ -61,20 +78,28 @@ var viewportwidth;
        viewportwidth = document.getElementsByTagName('body')[0].clientWidth,
        viewportheight = document.getElementsByTagName('body')[0].clientHeight
  }
+ 
+	if (document.getElementById("menuajax3")){
+	if (document.getElementById("menuajax")){
+		if (viewportwidth<700 ){
+			if (document.getElementById("menuajax3").innerHTML.length < 1){
+				document.getElementById("menuajax3").innerHTML = document.getElementById("menuajax").innerHTML ;
+				document.getElementById("menuajax").innerHTML = "";	
+			}
+		}else{
+			if (document.getElementById("menuajax").innerHTML.length < 1){
+				document.getElementById("menuajax").innerHTML = document.getElementById("menuajax3").innerHTML ;
+				document.getElementById("menuajax3").innerHTML = "";	
+		}}
+		}}
+	
 	var d= document, root= d.documentElement, body= d.body;
 	var realWidth= window.innerWidth || root.clientWidth || body.clientWidth, 
 	realHeight= window.innerHeight || root.clientHeight || body.clientHeight ;
 
 	
 	
-     	realWidth = parseInt(realWidth);
-	realHeight =  parseInt(realHeight);
-	if (realWidth > parseInt(document.getElementById("footer").clientWidth)){
-		document.getElementById("footerback").style.right = '-' + parseInt((realWidth - parseInt(document.getElementById("footer").clientWidth)) ) + 'px';
-	}else{
-		document.getElementById("footerback").style.right = '-'+parseInt(document.getElementById("footer").clientWidth) + 'px';
-	}
-		
+
 	
 	
 	if (typeof resizeframe == 'function') {
@@ -82,6 +107,7 @@ var viewportwidth;
 		resizeframe();
 		
 	}
+	
 }
 function getMouseXY(e) { 
 	
@@ -104,9 +130,9 @@ var IE = document.all?true:false
 if (!IE) document.captureEvents(Event.MOUSEMOVE)
 document.onmousemove = getMouseXY;
 </script>
-</head>
 
-<body  onLoad="window_onload2();" onresize="load();" onmouseup="window.down=0;" onmousedown="window.down=1;">
+<body  onLoad="window_onload2();" onresize="load();">
+
 
 <script type="text/javascript"> load();</script>
 
