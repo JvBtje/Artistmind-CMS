@@ -332,7 +332,7 @@ function open_image ($file,$size) {
 }
 $cachedupdate = false;
 if (file_exists ($fullimgurl)){
-	if (fileatime ($fullimgurl)	> fileatime ($imgname) ){
+	if (fileatime ($fullimgurl)	> $lastModified ){
 		$cachedupdate = true;
 	}
 }
@@ -370,6 +370,7 @@ while (!feof($fp)) {
 fclose ($fp);
 
 }else{
+	
  mysqli_close ($link);
 session_write_close();
 ini_set('memory_limit', '2048M');
@@ -569,6 +570,7 @@ switch($size["mime"]){
 // destroy the image to free up the memory
 imagedestroy($image);
 imagedestroy($img);
+
 }
 }else{
 	header('Cache-Control: no-cache, no-store, must-revalidate'); // HTTP 1.1.
