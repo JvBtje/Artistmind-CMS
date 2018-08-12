@@ -1,0 +1,30 @@
+Software License Agreement
+
+Copyright (c) 2017, Jeroen van Beuningen www.artistmind.nl
+All rights reserved.
+
+- You need to obtain this plugin from Jeroen van Beuningen 
+  and nobody else and keep your agreements that you have with 
+  Jeroen van Beuningen.
+- Jeroen van Beuningen stay owner of this plugin you get the 
+  license to use the plugin till you transfer the license. 
+  You need to have a unchanged license file this license in 
+  your directory.
+- The user generated content created with this plugin stays 
+  the property of the user that generated the content
+- It is not allowed to creat copy's of this plugin exept for 
+  backup purpose or debug purpose. When you create a copy for 
+  debug purpose you are not allowed to connect to the site from
+  others places then the localhost. 
+- You are allowed to adjust the code of the plugin
+- By changing the code of the plugin Jeroen van Beuningen stay's 
+  owner
+- You are allowed to transfer this license 1 time to a new owner. When you 
+  transfer the license you need to inform Jeroen van Beuningen 
+  when you transfer the license. You will lose your right to use 
+  the plugin. The persone where the license is transfered to need 
+  to accept this license file.
+- When this contract is not complied you must delete this 
+  plugin and copy's of the plugin
+- When there are revenues when the contract is not complied 
+  you need to pay the revenues to Jeroen van Beuningen

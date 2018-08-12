@@ -14,9 +14,13 @@ foreach ($files as $file){
 		}else{
 			//echo fileatime ($dir.DIRECTORY_SEPARATOR.$file)	< $keepcachetumb
 			if (fileatime ($dir.DIRECTORY_SEPARATOR.$file)	< $keepcachetumb ){
+				if (file_exists ($dir.DIRECTORY_SEPARATOR."tinynew".DIRECTORY_SEPARATOR.$file)){
+					unlink($dir.DIRECTORY_SEPARATOR."tinynew".DIRECTORY_SEPARATOR.$file);
+				}
 				echo $dir.DIRECTORY_SEPARATOR.$file."<br>";
 				//chmod($dir.'/'.$file,0777);
 				unlink($dir.DIRECTORY_SEPARATOR.$file);
+				
 			}
 		}
 	}
