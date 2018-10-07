@@ -55,9 +55,9 @@ function addgalimg(Naam,ImgText,Url,theWidth,theHeight,thetumbsize,tumbnailsquar
 		return tmparray;
 }
 if (screen.width > screen.height){
-	window.imgquality = screen.width;
+	window.imgquality = screen.width* window.devicePixelRatio;
 }else{
-	window.imgquality = screen.height;
+	window.imgquality = screen.height* window.devicePixelRatio;
 }
 
 
@@ -163,14 +163,14 @@ function galleryimgshow(Num){
 		document.getElementById("editimg").style.right =  '50%';
 		
 		window.curgalleryimg = parseInt(Num);
-		
+
 		if (document.getElementById('imgshower').src != window.galleryimages[Num].url){
 			
 			changeOpac(0, "imgcontainer");
 			
 			document.getElementById('imgshower').src = "";
 			if (window.imgquality == 0 ){
-				
+			
 				document.getElementById('imgshower').src = "./system/fileopen.php?url="+window.galleryimages[window.curgalleryimg].url;
 			} else {
 				
@@ -490,7 +490,6 @@ function imgquality2(){
 	}else if (window.imgqualityb == 0){
 		auto = true;
 		window.imgqualityb = window.imgquality +1
-		alert (window.imgqualityb);
 		alert ("Image quality is set to automatic size");		
 	}else{
 		window.imgqualityb = 7680;
@@ -500,7 +499,7 @@ function imgquality2(){
 	if (window.imgqualityb == 0 ){
 		window.nextimage = window.galleryimages[window.curgalleryimg].url;
 	} else {
-		window.nextimage = "./system/imgtumb.php?url="+window.galleryimages[window.curgalleryimg].url+"&maxsize="+trim(window.imgqualityb);
+		window.nextimage = "./system/imgtumb.php?url="+window.galleryimages[window.curgalleryimg].url+"&maxsize="+window.imgqualityb;
 	}
 	delalphaimg2();
 	growimagewindow(1.1);
