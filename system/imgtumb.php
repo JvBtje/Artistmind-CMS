@@ -271,12 +271,12 @@ header("Last-Modified: ".gmdate("D, d M Y H:i:s", $lastModified)." GMT");
 //set etag-header
 header("Etag: $etagFile");
 //make sure caching is turned on
-header("Cache-Control: max-age=10, must-revalidate");
+
 header("Content-type: text/html; charset=utf-8");
 if ($_SESSION['TypeUser'] == "Guest"){
-header('Cache-Control: public');
+header("Cache-Control: max-age=10, must-revalidate, public");
 }else{
-header('Cache-Control: private');
+header("Cache-Control: max-age=10, must-revalidate, private");
 }
 
 //check if page has changed. If not, send 304 and exit

@@ -10,7 +10,13 @@ session_start();
 mysqli_set_charset($link, "utf8");
 
   header("Content-type:text/html; charset=utf-8");
-    header("Cache-control: private"); 
+
+header("Content-type: text/html; charset=utf-8");
+if ($_SESSION['TypeUser'] == "Guest"){
+header("Cache-Control: max-age=10, must-revalidate, public");
+}else{
+header("Cache-Control: max-age=10, must-revalidate, private");
+}
 include("system/include.php");
 	$url = curPageURL();
 	$myUrl = explode("/", curPageURL());
