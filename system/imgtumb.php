@@ -13,8 +13,7 @@ if ($_SESSION['newsessionany'] != 10 ){
 	setDefaultLanguage ();
 }
 mysqli_set_charset($link, "utf8");
- header("Cache-Control: max-age=0, no-cache, no-store");
-  header("Content-type: text/html; charset=utf-8");
+
 $searchplug = Array();
 $i = 0;
 $root = scandir('../plugins'); 
@@ -272,7 +271,13 @@ header("Last-Modified: ".gmdate("D, d M Y H:i:s", $lastModified)." GMT");
 //set etag-header
 header("Etag: $etagFile");
 //make sure caching is turned on
+header("Cache-Control: max-age=10, must-revalidate");
+header("Content-type: text/html; charset=utf-8");
+if ($_SESSION['TypeUser'] == "Guest"){
 header('Cache-Control: public');
+}else{
+header('Cache-Control: private');
+}
 
 //check if page has changed. If not, send 304 and exit
 
@@ -353,21 +358,41 @@ if ($cachedupdate == true){
 		break;
 	}
 
-header("Pragma: public");
-header("Content-Type: $ctype");
-	
-$fp = fopen($fullimgurl, 'rb');
-//set_time_limit(filesize($imgname));
-header("Content-Length: ".filesize($fullimgurl));
-//fpassthru($fp);
 
-while (!feof($fp)) {
-	set_time_limit('1000');
-	print fread($fp, 1024);
-	flush();
-}
 
-fclose ($fp);
+$newfullimgurl = str_replace("imgtumbcache", "imgtumbcache/tinynew", $fullimgurl);
+if (file_exists ($newfullimgurl)){
+			header("Pragma: public");
+			header("Content-Type: $ctype");
+				
+			$fp = fopen($newfullimgurl, 'rb');
+			//set_time_limit(filesize($imgname));
+			header("Content-Length: ".filesize($newfullimgurl));
+			//fpassthru($fp);
+			while (!feof($fp)) {
+				set_time_limit('1000');
+				print fread($fp, 1024);
+				flush();
+			}
+
+			fclose ($fp);	
+		
+		}else{
+			header("Pragma: public");
+			header("Content-Type: $ctype");
+				
+			$fp = fopen($fullimgurl, 'rb');
+			//set_time_limit(filesize($imgname));
+			header("Content-Length: ".filesize($fullimgurl));
+			//fpassthru($fp);
+			while (!feof($fp)) {
+				set_time_limit('1000');
+				print fread($fp, 1024);
+				flush();
+			}
+
+			fclose ($fp);
+		}
 
 }else{
 	
