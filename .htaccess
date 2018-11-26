@@ -5,6 +5,7 @@ ErrorDocument 401 /401.php
 ErrorDocument 403 /403.php
 ErrorDocument 404 /404.php
 ErrorDocument 500 /500.php
+
 <files *.html>
 	SetOutputFilter DEFLATE
 </files>

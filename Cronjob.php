@@ -1,6 +1,6 @@
 <?php
 // Init session settings
-include("DB.php");
+include("./DB.php");
 
 
 
@@ -10,7 +10,7 @@ session_start();
 mysqli_set_charset($link, "utf8");
  header("Cache-Control: max-age=0, no-cache, no-store");
   header("Content-type: text/html; charset=utf-8");
-include("system/include.php");
+include("./system/include.php");
 	$url = curPageURL();
 	$myUrl = explode("/", curPageURL());
 if ($_SESSION['newsessionany'] != 10 ){
